@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)file:///D:/New%20folder/foysal.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3  Javascript Calculator</title>
+    <link rel="stylesheet" href="./Day3 Javascript Calculator_files/foysal.css">
+</head>
+<body>
+    <div class="calculatorBody">
+        <table>
+            <tbody><tr>
+                <td colspan="4"><input type="text" id="MyResult"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="C" onclick="DeleteMe()"></td>
+                <td><input type="button" value="(" onclick="calculator(&#39;(&#39;)"></td>
+                <td><input type="button" value=")" onclick="calculator(&#39;)&#39;)"></td>
+                <td><input type="button" value=" " onclick="calculator(&#39;&#39;)"></td>
+               
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="calculator(&#39;7&#39;)"></td>
+                <td><input type="button" value="8" onclick="calculator(&#39;8&#39;)"></td>
+                <td><input type="button" value="9" onclick="calculator(&#39;9&#39;)"></td>
+                <td><input type="button" value="+" onclick="calculator(&#39;+&#39;)"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="4" onclick="calculator(&#39;4&#39;)"></td>
+                <td><input type="button" value="5" onclick="calculator(&#39;5&#39;)"></td>
+                <td><input type="button" value="6" onclick="calculator(&#39;6&#39;)"></td>
+                <td><input type="button" value="-" onclick="calculator(&#39;-&#39;)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="calculator(&#39;1&#39;)"></td>
+                <td><input type="button" value="2" onclick="calculator(&#39;2&#39;)"></td>
+                <td><input type="button" value="3" onclick="calculator(&#39;3&#39;)"></td>
+                <td><input type="button" value="*" onclick="calculator(&#39;*&#39;)"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="0" onclick="calculator(&#39;0&#39;)"></td>
+                <td><input type="button" value="." onclick="calculator(&#39;.&#39;)"></td>
+                <td><input type="button" value="/" onclick="calculator(&#39;/&#39;)"></td>
+                <td><input type="button" value="=" onclick="Answer()"></td>
+            </tr>
+
+
+
+
+        </tbody></table>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        function DeleteMe() {
+            document.getElementById("MyResult").value = ""   
+
+      }
+
+        function calculator(NewValue){
+            document.getElementById("MyResult").value += NewValue; 
+
+        }
+
+    function Answer() {
+        var a = document.getElementById("MyResult").value ; 
+        var b = eval(a);
+        document.getElementById("MyResult").value = b
+
+    }
+    </script>
+
+</body></html>
